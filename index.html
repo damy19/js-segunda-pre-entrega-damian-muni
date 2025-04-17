@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador Home Banking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Simulador de Home Banking</h1>
+
+    <!-- Formulario de login -->
+    <div id="loginForm">
+      <h2>Iniciar sesión</h2>
+      <input type="text" id="nombreInput" placeholder="Tu nombre" />
+      <button id="iniciarSesionBtn">Iniciar sesión</button>
+    </div>
+
+    <!-- Sección de la app, oculta inicialmente -->
+    <div id="app" class="oculto">
+      <h2 id="bienvenida"></h2>
+
+      <div class="acciones">
+        <input type="number" id="montoInput" placeholder="Ingrese monto" />
+        <button id="depositarBtn">Depositar</button>
+        <button id="retirarBtn">Retirar</button>
+      </div>
+
+      <div class="info">
+        <p><strong>Saldo actual:</strong> $<span id="saldo"></span></p>
+        <h3>Historial de movimientos</h3>
+        <ul id="historial"></ul>
+      </div>
+    </div>
+
+    <button id="cerrarSesionBtn">Cerrar sesión</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
