@@ -34,6 +34,7 @@ const volverLoginLink = document.getElementById("volverLoginLink");
 const registroNombre = document.getElementById("registroNombre");
 const registroUsuario = document.getElementById("registroUsuario");
 const registroPassword = document.getElementById("registroPassword");
+const registrarseBtn = document.getElementById("registrarseBtn");
 
 // Esperar a que cargue el DOM
 window.addEventListener("DOMContentLoaded", async () => {
@@ -62,7 +63,7 @@ function mostrarApp() {
     bienvenida.textContent = `Hola, ${usuarioActual.nombre}`;
     montoInput.value = "";
     loginForm.classList.add("oculto");
-    registroForm.classList.add("oculto");  // Aseguramos que el registro también se oculte
+    registroForm.classList.add("oculto");
     appDiv.classList.remove("oculto");
     actualizarPantalla();
 }
@@ -169,6 +170,7 @@ document.getElementById("cerrarSesionBtn").addEventListener("click", () => {
     usuarioActual = null;
     appDiv.classList.add("oculto");
     loginForm.classList.remove("oculto");
+    registroForm.classList.add("oculto");
     historialUl.innerHTML = "";
     saldoSpan.textContent = "$0.00";
     usuarioInput.value = "";
@@ -188,17 +190,15 @@ volverLoginLink.addEventListener("click", () => {
   loginForm.classList.remove("oculto");
 });
 
-// Evento para registrar nuevo usuario (validado en submit del formulario)
-registroForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
+// Evento para registrar nuevo usuario
+registrarseBtn.addEventListener("click", () => {
   const nombre = registroNombre.value.trim();
   const usuario = registroUsuario.value.trim();
   const password = registroPassword.value.trim();
 
   if (!nombre || !usuario || !password) {
     alert("Completá todos los campos.");
-    return; // Salir si falta algo
+    return;
   }
 
   const existe = usuarios.some(u => u.usuario === usuario);
@@ -226,15 +226,12 @@ registroForm.addEventListener("submit", (event) => {
   // Loguear directamente al nuevo usuario
   usuarioActual = nuevoUsuario;
   localStorage.setItem("usuarioActual", JSON.stringify(usuarioActual));
+
+  // Ocultar formularios y mostrar la app
+  registroForm.classList.add("oculto");
+  loginForm.classList.add("oculto");
   mostrarApp();
-
-  // Limpiar campos de registro
-  registroNombre.value = "";
-  registroUsuario.value = "";
-  registroPassword.value = "";
 });
-
-
 
 
 

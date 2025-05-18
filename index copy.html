@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -10,24 +10,27 @@
   <div class="container">
     <h1>Simulador de Home Banking</h1>
 
-    <!-- Formulario de login -->
-    <form id="loginForm">
-      <h2>Iniciar sesión</h2>
-      <input type="text" id="usuarioInput" placeholder="Usuario" />
-      <input type="password" id="passwordInput" placeholder="Contraseña" />
-      <button type="submit" id="iniciarSesionBtn">Iniciar sesión</button>
-      <p>¿No tienes cuenta? <a href="#" id="irRegistroLink">Regístrate aquí</a></p>
-    </form>
+    <!-- Formulario de registro -->
 
-    <!-- Formulario de registro (oculto inicialmente) -->
-    <form id="registroForm" class="oculto">
-      <h2>Registro</h2>
+    <div id="registroForm" class="oculto">
+      <h2>Registrarse</h2>
       <input type="text" id="registroNombre" placeholder="Nombre completo" />
       <input type="text" id="registroUsuario" placeholder="Usuario" />
       <input type="password" id="registroPassword" placeholder="Contraseña" />
-      <button type="submit" id="registrarseBtn">Registrarse</button>
-      <p>¿Ya tienes cuenta? <a href="#" id="volverLoginLink">Inicia sesión aquí</a></p>
-    </form>
+      <button id="registrarseBtn">Registrarse</button>
+      <p><a href="#" id="volverLoginLink">Volver al login</a></p>
+    </div>
+    
+    <p><a href="#" id="irRegistroLink">¿No tenés cuenta? Registrate aquí</a></p>
+    
+
+    <!-- Formulario de login -->
+    <div id="loginForm">
+      <h2>Iniciar sesión</h2>
+      <input type="text" id="usuarioInput" placeholder="Usuario" />
+      <input type="password" id="passwordInput" placeholder="Contraseña" />
+      <button id="iniciarSesionBtn">Iniciar sesión</button>
+    </div>
 
     <!-- Sección de la app, oculta inicialmente -->
     <div id="app" class="oculto">
@@ -53,7 +56,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
-
 
 
 
