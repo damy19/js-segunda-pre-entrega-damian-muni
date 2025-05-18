@@ -1,19 +1,34 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simulador Home Banking</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Simulador de Home Banking</h1>
 
+    <!-- Formulario de registro -->
+
+    <div id="registroForm" class="oculto">
+      <h2>Registrarse</h2>
+      <input type="text" id="registroNombre" placeholder="Nombre completo" />
+      <input type="text" id="registroUsuario" placeholder="Usuario" />
+      <input type="password" id="registroPassword" placeholder="Contraseña" />
+      <button id="registrarseBtn">Registrarse</button>
+      <p><a href="#" id="volverLoginLink">Volver al login</a></p>
+    </div>
+    
+    <p><a href="#" id="irRegistroLink">¿No tenés cuenta? Registrate aquí</a></p>
+    
+
     <!-- Formulario de login -->
     <div id="loginForm">
       <h2>Iniciar sesión</h2>
-      <input type="text" id="nombreInput" placeholder="Tu nombre" />
+      <input type="text" id="usuarioInput" placeholder="Usuario" />
+      <input type="password" id="passwordInput" placeholder="Contraseña" />
       <button id="iniciarSesionBtn">Iniciar sesión</button>
     </div>
 
@@ -28,7 +43,7 @@
       </div>
 
       <div class="info">
-        <p><strong>Saldo actual:</strong> $<span id="saldo"></span></p>
+        <p><strong>Saldo actual:</strong> <span id="saldo"></span></p>
         <h3>Historial de movimientos</h3>
         <ul id="historial"></ul>
       </div>
@@ -37,8 +52,10 @@
     <button id="cerrarSesionBtn">Cerrar sesión</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
+
 
 

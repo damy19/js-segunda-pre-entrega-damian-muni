@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "usuario": "juan",
+      "password": "1234",
+      "cuentas": [
+        {
+          "tipo": "Cuenta Corriente",
+          "saldo": 15000,
+          "movimientos": [
+            {
+              "fecha": "2025-05-01",
+              "descripcion": "Depósito inicial",
+              "monto": 10000
+            },
+            {
+              "fecha": "2025-05-05",
+              "descripcion": "Pago de servicios",
+              "monto": -2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "María Gómez",
+      "usuario": "maria",
+      "password": "abcd",
+      "cuentas": [
+        {
+          "tipo": "Caja de Ahorro",
+          "saldo": 8000,
+          "movimientos": [
+            {
+              "fecha": "2025-05-03",
+              "descripcion": "Transferencia recibida",
+              "monto": 3000
+            }
+          ]
+        }
+      ]
+    }
+ ]
+  
